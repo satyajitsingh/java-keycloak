@@ -1,0 +1,7 @@
+FROM openjdk:8-jdk-alpine
+RUN mkdir app 
+ADD hmdemo-0.1.jar app/hmdemo-0.1.jar.jar 
+WORKDIR app
+RUN ls
+EXPOSE 8082
+ENTRYPOINT ["java","-jar","hmdemo-0.1.jar.jar"]
